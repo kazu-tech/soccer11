@@ -1,0 +1,21 @@
+.wrapper 
+  .head
+    .header__logo
+      soccer11
+    .header__message
+      自分のチームのフォーメーションを登録しよう
+    .myteam
+      日本代表
+  .main1
+    = link_to "登録ページへ", '/posts/new', class: "post_button"
+    .game
+      - @posts.each do |post|
+        .game-date
+          = post.date
+        .game-match
+          = link_to post.match, post_path(post.id), class: "game-match"
+        .game-result
+          = post.result
+            
+         
+              

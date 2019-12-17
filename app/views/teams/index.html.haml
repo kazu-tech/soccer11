@@ -1,0 +1,20 @@
+.wrapper 
+  .head
+    .header__logo
+      soccer11
+    .header__message
+      自分のチームの記録
+    .myteam
+      //日本代表
+      = @team.name
+  .main1
+    %a.post-button{href: "/posts/new"} 登録ページへ
+    .game
+      - @posts.each do |post|
+        .game-date
+          = post.date
+        .game-match
+          = link_to post.match, post_path(post.id), class: "game-match"
+        .game-result
+          = post.result
+            

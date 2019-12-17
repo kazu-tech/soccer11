@@ -1,0 +1,100 @@
+.wrapper 
+  .header
+    .header__log
+      soccer11
+    .header__message
+      自分のチームのフォーメーションを登録しよう
+    .contents
+      .contents-data
+        .myteam
+          = @team.name
+        .info
+          .date
+            日にち
+            %br
+            = @post.date
+          .match
+            対戦相手
+            %br
+            = @post.match
+          .result
+            試合結果
+            %br 
+            = @post.result
+  .main 
+    .contents-formation
+      .formation
+        //  %input#search{placeholder: "Search...", type: "search"}/
+        .under-box
+          .member-list
+            .lineup
+              スターティングメンバー
+              %br
+              = @post.num1
+              %br
+              = @post.num2
+              %br
+              = @post.num3
+              %br
+              = @post.num4
+              %br
+              = @post.num5
+              %br
+              = @post.num6
+              %br
+              = @post.num7
+              %br
+              = @post.num8
+              %br
+              = @post.num9
+              %br
+              = @post.num10
+              %br
+              = @post.num11
+              %br
+              %br
+              .button-box
+                = link_to "登録ページへ", '/posts/new', class: "button"
+                = link_to "編集ページへ", '/posts/edit', class: "button"
+          .formation-view     
+            .style
+              = @post.formation
+            %br
+            %br
+            .fw
+              .fw1
+                = @post.num11
+              %br
+              .fw2
+                = @post.num10
+              %br
+            .mf-o
+              .mf1
+                = @post.num9
+              %br
+              .mf2
+                = @post.num8
+              %br
+              .mf3
+                = @post.num7
+              %br
+            .mf-d
+              .mf4
+                = @post.num6
+              %br
+              .mf5
+                = @post.num5
+              %br
+            .df
+              .df1
+                = @post.num4
+              %br
+              .df2
+                = @post.num3
+              %br
+              .df3
+                = @post.num2
+              %br
+            .gk
+              = @post.num1
+            
