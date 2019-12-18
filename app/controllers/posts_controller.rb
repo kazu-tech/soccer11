@@ -21,9 +21,9 @@ class PostsController < ApplicationController
   end
 
   def show
-    #@post = Post.find(params[:id])
+    @post = Post.find(params[:id])
     @team = Team.find(1)
-    @post = Post.find(1)
+    # @post = Post.find(1)
   end
 
   
