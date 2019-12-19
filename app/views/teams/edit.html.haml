@@ -1,10 +1,12 @@
-.main-header
-  .soccer11-logo
-  SOCCER11
-.main-contents
-  .team-name
-  チーム名を登録
-  .team-password
-  パスワード
-
-
+.login
+  %h1 SOCCER 11　新規登録
+  %form{method: "post"}
+    %input{name: "team", placeholder: "チーム名", required: "required", type: "text"}
+    %br
+    %input{name: "email", placeholder: "e-mail", required: "required", type: "text"}
+    %br
+    %input{name: "password", placeholder: "パスワード", required: "required", type: "password"}
+    %br
+    %button.btn{type: "submit"} 登録
+    %br
+    = link_to "トップページへ戻る", "root_path"

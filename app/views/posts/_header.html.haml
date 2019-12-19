@@ -1,0 +1,16 @@
+.wrapper 
+  .head
+    .header__logo
+      soccer11
+    .header__message
+      自分のチームのフォーメーションを登録しよう
+      .team_image
+        = image_tag ""
+      .myteam
+        = @team.name
+  .head_under
+    .header_btn
+      .btn1
+        = link_to "ログインページへ", '/teams/new', class: "main1"
+      .btn2
+        = link_to "新規チーム登録ページへ", '/teams/:id/edit', class: "main2"
