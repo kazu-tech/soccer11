@@ -1,8 +1,7 @@
 class PostsController < ApplicationController
   def index
-    #@team = Team.all
-    #@post = Post.find(1)
-    @posts = Post.all.order(id: "DESC")
+    # @team = Team.find(1)
+    # @posts = Post.all.order(id: "DESC")
   end
 
   def new

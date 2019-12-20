@@ -2,7 +2,7 @@ class TeamsController < ApplicationController
   protect_from_forgery with: :null_session 
   protect_from_forgery except: :create
   def index
-    @teams = Team.find(params[:id])
+    @teams = Team.find(1)
     @posts = Post.all
   end
   
