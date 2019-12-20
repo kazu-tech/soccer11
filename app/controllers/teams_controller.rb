@@ -9,7 +9,7 @@ class TeamsController < ApplicationController
   end
 
   def new
-    #@tems = Team.new
+    @teams = Team.new
   end
 
   def update
@@ -23,6 +23,10 @@ class TeamsController < ApplicationController
   def create
     @products = Product.where('name LIKE(?)', "%#{params[:keyword]}%")
     redirect_to 'index'
+  end
+
+  def show
+    @posts = Post.all
   end
 
   private

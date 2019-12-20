@@ -1,26 +1,5 @@
-.wrapper 
-  .head
-    .header__logo
-      soccer11
-    .header__message
-      自分のチームのフォーメーションを登録しよう
-    .contents
-      .contents-data
-        .myteam
-          <i class="fas fa-tshirt"></i>日本代表
-        .infomation
-          .date
-            %form{action: "//www-creators.com/rsc/receiver.php", method: "post"}
-              %label 試合した日
-              %input#date{name: "date", type: "date", value: ""}/
-          .match
-            %form{action: "//www-creators.com/rsc/receiver.php", method: "post"}
-              %label 対戦相手
-              %input#match{maxlength: "10", name: "battle", placeholder: "対戦相手", type: "text", value: ""}/
-          .result
-            %form{action: "//www-creators.com/rsc/receiver.php", method: "post"}
-              %label 試合結果
-              %input#result{maxlength: "10", name: "result", placeholder: "試合結果", type: "text", value: ""}/
+= render "header"
+.wrapper
   .mains
     .contents-formation
       .formation
@@ -29,8 +8,6 @@
         .formation-fields
           .player
             .switch-contents
-
-
               %input#layout-4-4-2{checked: "checked", name: "layout", type: "radio", varue: "4-4-2"}/
               %label{for: "layout-4-4-2"} 4-4-2
               %input#layout-4-5-1{name: "layout", type: "radio", varue: "4-5-1"}/
@@ -53,6 +30,3 @@
                   = form.text_area :content, placeholder: :選手名, id: :num2
                   = form.text_area :content, placeholder: :選手名, id: :num1
                   = form.submit '投稿する', class: :form__btn
-
-
-        

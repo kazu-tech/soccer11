@@ -1,1 +1,12 @@
 = render "header"
+.wapper
+  .main1
+    .game
+      - @posts.each do |post|
+        .game-date
+          = post.date
+        .game-match
+          = link_to post.match, post_path(post.id), class: "game-match"
+        .game-result
+          = post.result
+            

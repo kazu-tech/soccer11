@@ -1,26 +1,5 @@
+= render "header"
 .wrapper 
-  .header
-    .header__log
-      soccer11
-    .header__message
-      自分のチームのフォーメーションを登録しよう
-    .contents
-      .contents-data
-        .myteam
-          = @team.name
-        .info
-          .date
-            日にち
-            %br
-            = @post.date
-          .match
-            対戦相手
-            %br
-            = @post.match
-          .result
-            試合結果
-            %br 
-            = @post.result
   .main 
     .contents-formation
       .formation
