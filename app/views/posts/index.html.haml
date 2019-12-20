@@ -1,5 +1,7 @@
 .header
   = render "header"
 .main
-  .game_box
-    
+  - @posts.each do |post|
+    .game_box
+      = post.date
+      = post.match

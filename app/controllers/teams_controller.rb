@@ -2,7 +2,6 @@ class TeamsController < ApplicationController
   protect_from_forgery with: :null_session 
   protect_from_forgery except: :create
   def index
-    @teams = Team.find(1)
     @posts = Post.all
   end
   
@@ -10,7 +9,7 @@ class TeamsController < ApplicationController
   end
 
   def new
-    @tems = Team.new
+    #@tems = Team.new
   end
 
   def update
