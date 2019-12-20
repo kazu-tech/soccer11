@@ -1,12 +1,13 @@
 .login
-  %h1 SOCCER 11　新規登録
-  %form{method: "post"}
-    %input{name: "team", placeholder: "チーム名", required: "required", type: "text"}
-    %br
-    %input{name: "email", placeholder: "e-mail", required: "required", type: "text"}
-    %br
-    %input{name: "password", placeholder: "パスワード", required: "required", type: "password"}
-    %br
-    %button.btn{type: "submit"} 登録
-    %br
-    = link_to "トップページへ戻る", "root_path"
+= form_with(model: @team, local: true) do |form|
+  新規登録
+  .formbox
+    = form.text_field :name, placeholder: "チーム名"
+  .formbox
+    = form.text_field :image, placeholder: "写真"
+  .formbox
+    = form.email_field :name, placeholder: "メールアドレス"
+  .formbox
+    = form.password_field :name, placeholder: "パスワード"
+  .formbtn
+    = form.submit "SEND"
