@@ -10,6 +10,7 @@ class TeamsController < ApplicationController
   end
 
   def new
+    @tems = Team.new
   end
 
   def update

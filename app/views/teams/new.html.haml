@@ -1,7 +1,20 @@
-.login
-  %h1 SOCCER 11　ログイン
-  %form{method: "post"}
-    %input{name: "u", placeholder: "チーム名", required: "required", type: "text"}/
-    %input{name: "p", placeholder: "Password", required: "required", type: "password"}/
-    %button.btn{:type => "submit"} ログイン
-    
+.new_top
+  .new_box
+    .new_title
+      チーム新規登録
+    .new_team
+      .form
+        .team_form
+        = form_with model: @team, class: :form, local: true do |form|
+          .team_name
+          = form.text_field :name, placeholder: :チーム名, class: :form_name
+          .team_email
+          = form.text_field :email, placeholder: :メールアドレス, class: :form_email
+          .team_password
+          = form.text_field :password, placeholder: :パスワード, clss: :form_password
+          .team_btn
+          = form.submit '投稿する', class: :form__btn
+    .back_btn
+      戻る
+      = link_to root_path do
+        %button.btn-default
