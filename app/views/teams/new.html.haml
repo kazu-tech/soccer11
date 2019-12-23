@@ -13,8 +13,7 @@
           .team_password
           = form.text_field :password, placeholder: :パスワード, clss: :form_password
           .team_btn
-          = form.submit '投稿する', class: :form__btn
+          = form.submit '新規登録する', class: :form__btn
     .back_btn
-      戻る
       = link_to root_path do
-        %button.btn-default
+        戻る
