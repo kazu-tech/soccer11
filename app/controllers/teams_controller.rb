@@ -6,10 +6,11 @@ class TeamsController < ApplicationController
   end
   
   def edit
+    @team = Team.find(params[:id])
   end
 
   def new
-    @teams = Team.new
+    @team = Team.new
   end
 
   def update
@@ -21,7 +22,7 @@ class TeamsController < ApplicationController
   end
 
   def create
-    @products = Product.where('name LIKE(?)', "%#{params[:keyword]}%")
+    @team = Team.find(params[:id])
     redirect_to 'index'
   end
 
